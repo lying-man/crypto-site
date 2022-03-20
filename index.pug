@@ -1,0 +1,157 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="CSS/reset.css")
+        link(rel="stylesheet" href="CSS/icon.css")
+        link(rel="stylesheet" href="CSS/select.css")
+        link(rel="stylesheet" href="CSS/style.css")
+        title Cryptocurrency 
+    body 
+        .outer-wrapper 
+            .inner-wrapper 
+                //header
+                header.header 
+                    a(href="#").header-logo 
+                        img(src="Images/logo.svg" alt="logo image").header-logo-image
+                    .header-content 
+                        ul.header-content-links 
+                            li.header-item
+                                a(href="#").header-item-link Products
+                            li.header-item
+                                a(href="#").header-item-link Features
+                            li.header-item
+                                a(href="#").header-item-link About
+                            li.header-item
+                                a(href="#").header-item-link Contact
+                        .header-content-autorization 
+                            a(href="#").header-autorize-link Login 
+                            .divide-autorize
+                            a(href="#").header-autorize-btn Register
+                    button.header-menu 
+                        img(src="Images/menu.svg" alt="menu icon").header-menu-img
+                //full screen
+                .performance 
+                    .performance-content 
+                        .performance-sale
+                            .performance-sale-count 75% SAVE 
+                            .performance-sale-text For the Black Friday weekend 
+                        h1.performance-title Fastest & secure platform to invest in crypto 
+                        h2.performance-subtitle Buy and sell cryptocurrencies, trusted by 10M wallets with over $30 billion in transactions.
+                        a(href="#").performance-link Try for FREE
+                    .performance-image
+                        img(src="Images/main_image.svg" alt="crypto picture").performance-image-item
+                //statistic
+                .stat-box 
+                    .stat-box-item 
+                        .stat-box-image
+                            .icon-Stat_result
+                        .stat-box-content 
+                            h2.stat-box-content-title $30B
+                            .stat-box-content-text Digital Currency Exchanged
+                    .stat-box-item 
+                        .stat-box-image
+                            .icon-Person
+                        .stat-box-content 
+                            h2.stat-box-content-title 10M+
+                            .stat-box-content-text Trusted Wallets Investor
+                    .stat-box-item 
+                        .stat-box-image
+                            .icon-Earth
+                        .stat-box-content 
+                            h2.stat-box-content-title 195
+                            .stat-box-content-text Countries Supported
+                //calculator top
+                .calculator-top 
+                    h2.calculator-title Check how much you can earn
+                    h3.calculator-subtitle Let’s check your hash rate to see how much you will earn today, Exercitation veniam consequat sunt nostrud amet.
+                    .calculator-content 
+                        .calc-input-block._inp-block_
+                            input(type="text" value="" id="calc" placeholder=" " autocomplete="off").calc-input._inp-item_
+                            label(for="calc").calc-label._inp-label_ Enter your hash rate
+                            ._inp-panel_ 
+                        .select-hash 
+                        button.calc-btn Calculate
+        //calculator bottom
+        .light-wrapper
+            .light-wrapper-box
+                .calculator-bottom
+                    .calculator-indication ESTIMATED 24 HOUR REVENUE:
+                    .calculator-result
+                        .calculator-result-loader
+                        .calculator-result-default Here will be your income
+                        //There are some problems, repeat again Here will be your income
+                        .calculator-result-number
+                            .calc-ethereum 0.055 130 59 ETH
+                            .calc-ethereum-usd ($1275)
+                    .calculator-note Revenue will change based on mining difficulty and Ethereum price.
+                //cards
+                .cards
+                    h2.cards-title Trade securely and market the high growth cryptocurrencies.
+                    .cards-body
+                        .cards-body-item
+                            .card-icon.bitcoin
+                                .icon-Bitcoin
+                            h3.card-title
+                                span.card-title-main Bitcoin
+                                span.card-title-additional BTC
+                            .card-text Digital currency in which a record of transactions is maintained.
+                            a(href="#").card-button
+                                .card-button-text Start mining
+                                .card-button-icon 
+                                    img(src="Images/btn_arrow.svg" alt="picture arrow").card-button-icon_item
+                        .cards-body-item 
+                            .card-icon.ethereum
+                                .icon-Ethereum
+                            h3.card-title
+                                span.card-title-main Ethereum
+                                span.card-title-additional ETH
+                            .card-text Blockchain technology to create and run decentralized digital applications.
+                            a(href="#").card-button
+                                .card-button-text Start mining
+                                .card-button-icon 
+                                    img(src="Images/btn_arrow.svg" alt="picture arrow").card-button-icon_item
+                        .cards-body-item 
+                            img(src="Images/litecoin.svg" alt="coin picture").litecoin-image
+                            h3.card-title
+                                span.card-title-main Litecoin
+                                span.card-title-additional LTC
+                            .card-text Cryptocurrency that enables instant payments to anyone in the world.
+                            a(href="#").card-button
+                                .card-button-text Start mining
+                                .card-button-icon 
+                                    img(src="Images/btn_arrow.svg" alt="picture arrow").card-button-icon_item
+        //subscribe block
+        .gradient-wrapper 
+            .subscribe 
+                .subscribe-text 
+                    h2.subscribe-title Start mining now
+                    .subscribe-subtitle Join now with CRAPPO to get the latest news and start mining now
+                form(action="#").subscribe-reg
+                    .subscribe-reg-content._inp-block_
+                        input(type="e-mail" id="regInput" value="" placeholder=" " autocomplete="off").subscribe-reg-content__input._inp-item_
+                        label(for="regInput").subscribe-reg-content__label._inp-label_  Enter your email
+                        ._inp-panel_
+                    button(type="submit").subscribe-reg-btn Subscribe
+        //contacts
+        .contacts-wrapper
+            .contacts 
+                .contacts-text ©2021 CRAPPO. All rights reserved
+                .contacts-icons 
+                    a(href="http://facebook.com").contacts-icons-item
+                        .icon-facebook
+                    a(href="http://instagramm.com").contacts-icons-item
+                        .icon-instagramm
+                    a(href="http://youtube.com").contacts-icons-item
+                        .icon-youtube
+                    a(href="http://twitter.com").contacts-icons-item
+                        .icon-twitter
+                    a(href="http://linkedin.com").contacts-icons-item
+                        .icon-linkedin
+        .overlay
+
+
+        script(src="JS/select.js") 
+        script(src="JS/main.js") 

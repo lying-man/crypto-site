@@ -1,0 +1,121 @@
+
+.calculator-top {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    .calculator-title {
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        line-height: 150%;
+        margin-bottom: 24px;
+        @include adaptiv-font(40, 22);
+        @media (min-width: 1200px) { font-size: 40px; }
+    }
+
+    .calculator-subtitle {
+        font-weight: 400;
+        line-height: 150%;
+        text-align: center;
+        color: #E0E0E0;
+        max-width: 622px;
+        width: 100%;
+        margin: 0 auto;
+        @include adaptiv-font(18, 16);
+        @media (min-width: 1200px) { font-size: 18px; }
+        margin-bottom: 64px;
+    }
+
+    .calculator-content {
+        background: #FBFCFE;
+        border-radius: 16px 16px 0px 0px;
+        @include adaptiv(padding, 20, 48);
+        @media (min-width: 1200px) { padding: 48px; }
+        max-width: 942px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 930px) {
+            flex-wrap: wrap;
+        }
+
+        .calc-input-block {
+            flex: 0 1 403px;
+            margin-right: 10px;
+            @media (max-width: 759px) { flex: 1 1 100%; margin-right: 0px; }
+
+            .calc-input {
+                padding-bottom: 2px;
+
+                &:disabled {
+                    background-color: #FBFCFE;;
+                }
+            }
+
+            .calc-label {
+                @media (min-width: 1200px) { font-size: 20px; }
+                @include adaptiv-font(20, 16);
+            }
+        }
+
+        .select-hash {
+            margin-right: 10px;
+            flex: 0 0 200px;
+            transform: translateY(-13%);
+            @media (max-width: 759px) { transform: translateY(0%); margin-top: 16px; }
+
+            &.disabled {
+                pointer-events: none;
+            }
+        }
+
+        .calc-btn {
+            flex: 0 0 146px;
+            @extend %content;
+            font-weight: 500;
+            @include adaptiv-font(18, 16);
+            line-height: 150%;
+            text-align: center;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 32px;
+            background-color: $blueColor;
+            border: none;
+            transition: all .2s ease-out;
+
+            &.disabled {
+                pointer-events: none;
+                background-color: #ccc;
+            }
+
+            @media (max-width: 760px) {  padding: 8px 16px; }
+            @media (min-width: 1200px) { font-size: 18px; }
+            @media (max-width: 905px) { margin-top: 16px; }
+
+            &:hover {
+                background-color: #0c43b5;
+                transition: all .2s ease-out;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

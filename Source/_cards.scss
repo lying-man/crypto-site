@@ -1,0 +1,274 @@
+
+.cards {
+    width: 100%;
+    @include adaptiv(margin-top, 40, 100);
+    @media (min-width: 1200px) { margin-top: 100px; }
+
+    &-title {
+        font-weight: 700;
+        font-size: 40px;
+        @include adaptiv-font(40, 22);
+        @include stopFont(40);
+        line-height: 150%;
+        color: $mainBgColor;
+        text-align: center;
+        max-width: 741px;
+        margin: 0 auto;
+        @media (min-width: 1200px) { margin-bottom: 64px; }
+        @include adaptiv(margin-bottom, 30, 64);
+    }
+
+    &-body {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        @media (max-width: 1190px) { flex-wrap: wrap; align-items: stretch }
+
+        &-item {
+            flex: 0 1 370px;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 10px #f6f2fc;
+            border-radius: 16px;
+            padding: 48px 24px;
+            cursor: default;
+            transition: all .2s ease-out;
+            @media (max-width: 867px) { background: #2B076E; }
+
+            @media (max-width: 1190px) {
+                padding: 24px;
+            }
+
+            &:last-child {
+                @media (max-width: 1190px) { flex: 1 1 100%; margin-top: 16px; }
+            }
+
+            &:not(:last-child) {
+                @media (max-width: 1190px) { flex: 0 1 49% }
+                @media (max-width: 700px) { flex: 1 1 100% }
+            }
+
+            &:first-child {
+                @media (max-width: 700px) { margin-bottom: 16px; }
+            }
+
+            &:hover {
+                background: #2B076E;
+                transition: all .2s ease-out;
+            }
+
+            //image
+            .litecoin-image {
+                width: 80px;
+                height: 80px;
+                display: block;
+                margin: 0 auto;
+                @media (min-width: 1200px) { margin-bottom: 48px; }
+                @include adaptiv(margin-bottom, 30, 48);
+            }
+
+            .card-icon {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                @extend %content;
+                margin: 0 auto;
+                @media (min-width: 1200px) { margin-bottom: 48px; }
+                @include adaptiv(margin-bottom, 30, 48);
+
+                .icon-Bitcoin:before {
+                    color: #fff;
+                    font-size: 40px;
+                }
+
+                .icon-Ethereum:before {
+                    color: #fff;
+                    font-size: 40px;
+                }
+
+                //colors
+                &.bitcoin { background: linear-gradient(180deg, #F9AA4B -0.02%, #F7931A 99.99%); }
+                &.ethereum { background: #1181E8; }
+
+            }
+
+            .card-title {
+                width: 100%;
+                @extend %content;
+                flex-wrap: wrap;
+                margin-bottom: 16px;
+
+                &-main {
+                    font-weight: 700;
+                    font-size: 32px;
+                    @include adaptiv-font(32, 20);
+                    @include stopFont(32);
+                    line-height: 150%;
+                    color: $mainBgColor;
+                    margin-right: 8px;
+                    transition: all .2s ease-out;
+                    @media (max-width: 867px) { color: #fff }
+                }
+
+                &-additional {
+                    font-weight: 500;
+                    font-size: 18px;
+                    @include stopFont(18);
+                    @include adaptiv-font(18, 10);
+                    line-height: 150%;
+                    color: #BDBDBD;
+                    opacity: 1;
+                    transition: all .2s ease-out;
+                    @media (max-width: 867px) { opacity: 0.7; color: #fff }
+                }
+            }
+
+            &:hover .card-title-additional {
+                color: #fff;
+                opacity: 0.7;
+                transition: all .2s ease-out;
+            }
+
+            &:hover .card-title-main {
+                color: #ffff;
+                transition: all .2s ease-out;
+            }
+
+            .card-text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                text-align: center;
+                letter-spacing: 0.01em;
+                width: 100%;
+                color: #828282;
+                margin-bottom: 24px;
+                transition: all .2s ease-out;
+                @media (max-width: 867px) { color: #fff }
+            }
+
+            &:hover .card-text {
+                color: #fff;
+                transition: all .2s ease-out;
+            }
+
+            //card hover
+            &:hover .card-button {
+                background-color: $blueColor;
+                width: 205px;
+                padding: 16px 16px 16px 0px;
+                transition: all .2s ease-out;
+            }
+
+            //text card btn
+            &:hover .card-button .card-button-text {
+                opacity: 1;
+                pointer-events: auto;
+                transition: all .2s ease-out;
+            }
+
+            //icon card btn
+            &:hover .card-button .card-button-icon {
+                margin-left: 24px;
+                width: 32px;
+                height: 32px;
+                border: 0px solid rgba(43, 7, 110, 0.2);
+                transition: all .2s ease-out;
+
+                &_item {
+                    transform: scale(0.5);
+                    transition: all .2s ease-out;
+                }
+            }
+
+            //animate cards
+            .card-button {
+                width: 64px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                border-radius: 32px;
+                background-color: #fff;
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-end;
+                position: relative;
+                min-height: 64px;
+                overflow: hidden;
+                transition: all .2s ease-out;
+
+                @media (max-width: 867px) {
+                    background-color: $blueColor;
+                    width: 205px;
+                    padding: 16px 16px 16px 0px;
+                }
+
+                &-text {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 150%;
+                    text-align: center;
+                    color: #FFFFFF;
+                    max-width: 109px;
+                    opacity: 0;
+                    pointer-events: none;
+                    position: absolute;
+                    user-select: none;
+                    left: 24px;
+                    transition: all .2s ease-out;
+
+                    @media (max-width: 867px) {
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                }
+
+                &-icon {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    @extend %content;
+                    border: 2px solid rgba(43, 7, 110, 0.2);
+                    margin-left: 0px;
+                    transition: all .2s ease-out;
+
+                    @media (max-width: 867px) {
+                        margin-left: 24px;
+                        width: 32px;
+                        height: 32px;
+                        border: 0px solid rgba(43, 7, 110, 0.2);
+                    }
+
+                    &_item {
+                        width: 12px;
+                        height: 20px;
+                        transform: scale(1);
+                        transition: all .2s ease-out;
+
+                        @media (max-width: 867px) {
+                            transform: scale(0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
